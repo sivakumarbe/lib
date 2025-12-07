@@ -78,53 +78,61 @@ Architecture: Provider-based modular design
 
 📂 Project Structure (Source Code Overview)
 lib/
-├── main.dart
-│   Entry point of the application.
-│
-├── provider/
-│   ├── report_provider.dart
-│   Handles OCR processing, glucose extraction,
-│   storage, and health categorization.
-│
-│   ├── meal_provider.dart
-│   Manages meal recommendations based on glucose levels.
-│
-│   └── reminder_provider.dart
-│   Controls pill reminder scheduling and notification logic.
-│
-├── services/
-│   ├── ocr_service.dart
-│   Core OCR logic for extracting glucose values
+C:.
+│   main.dart
 │   
-│   ├── schedule_manager.dart
-│   Handles time-based scheduling of reminders.
+├───core
+│   ├───constants
+│   ├───theme
+│   │       app_theme.dart
+│   │       colors.dart
+│   │       text_styles.dart
+│   │
+│   └───utils
+│           sugar_level_detector.dart
 │
-│   └── notification_service.dart
-│   Initializes and manages local notifications.
+├───models
+│       meal_plan_model.dart
 │
-├── screens/
-│   ├── upload_report_screen.dart
-│   Allows users to upload blood reports.
+├───provider
+│       meal_provider.dart
+│       report_provider.dart
+│       settings_provider.dart
 │
-│   ├── ocr_result_screen.dart
-│   Displays extracted glucose values in a clean UI.
+├───routes
+│       app_routes.dart
 │
-│   ├── meal_suggestion_screen.dart
-│   Shows personalized meal suggestions.
+├───screens
+│   ├───activity
+│   │       activity_screen.dart
+│   │
+│   ├───home
+│   │       home_screen.dart
+│   │
+│   ├───meals
+│   │       meal_day_view_screen.dart
+│   │       meal_suggestion_screen.dart
+│   │
+│   ├───reminders
+│   │       pill_reminder_screen.dart
+│   │
+│   ├───reports
+│   │       ocr_result_screen.dart
+│   │       upload_report_screen.dart
+│   │
+│   ├───settings
+│   └───sos
+├───services
+│   │   meal_service.dart
+│   │   ocr_service.dart
+│   │   tts_service.dart
+│   │
+│   └───notifications
+│           notification_service.dart
+│           schedule_manager.dart
 │
-│   ├── pill_reminder_screen.dart
-│   Pill reminder configuration and testing interface.
-│
-│   ├── activity_menu_screen.dart
-│   Central activity navigation menu.
-│
-├── models/
-│   └── meal_model.dart
-│   Defines meal data structure.
-│
-└── widgets/
-    └── reusable_widgets.dart
-    Common reusable UI components.
+└───widgets
+        tile_card.dart
 
 🔐 Privacy & Data Safety
 
