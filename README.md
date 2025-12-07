@@ -80,7 +80,7 @@ Architecture: Provider-based modular design
 lib/
 C:.
 │   main.dart
-│   
+│
 ├───core
 │   ├───constants
 │   ├───theme
@@ -120,8 +120,7 @@ C:.
 │   │       ocr_result_screen.dart
 │   │       upload_report_screen.dart
 │   │
-│   ├───settings
-│   └───sos
+│   └───settings
 ├───services
 │   │   meal_service.dart
 │   │   ocr_service.dart
